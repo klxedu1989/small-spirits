@@ -120,7 +120,8 @@ section {
   .content-right .content-right-top {
     width: 100%; }
     .content-right .content-right-top .content-right-top-l {
-      width: 300px; }
+      width: 300px;
+      height: 325px; }
       .content-right .content-right-top .content-right-top-l .zuoyi a {
         display: block;
         width: 300px;
@@ -228,11 +229,17 @@ section {
       height: 310px;
       position: relative; }
       .content-right .content-right-bottom .yuer a {
+        position: relative;
+        perspective: 1000px;
         display: inline-block;
         border-radius: 8px;
         transition: 500ms all ease; }
         .content-right .content-right-bottom .yuer a img {
-          border-radius: 5px; }
+          border-radius: 5px;
+          position: absolute;
+          transform: rotateY(0deg);
+          opacity: 1;
+          transition: 0.5s all ease-in-out; }
         .content-right .content-right-bottom .yuer a div.yuertime, .content-right .content-right-bottom .yuer a div.yuergoju {
           width: 300px;
           height: 310px;
@@ -240,7 +247,9 @@ section {
           left: 0;
           top: 0;
           background: #e4f4ff;
-          display: none;
+          opacity: 0;
+          transform: rotateY(-98.5deg);
+          transition: 0.5s all ease-in-out;
           border-radius: 5px; }
           .content-right .content-right-bottom .yuer a div.yuertime h2, .content-right .content-right-bottom .yuer a div.yuergoju h2 {
             border-radius: 5px 5px 0 0;
@@ -290,11 +299,12 @@ section {
               .content-right .content-right-bottom .yuer a div.yuertime.red ul li:hover, .content-right .content-right-bottom .yuer a div.yuergoju.red ul li:hover {
                 text-decoration: underline;
                 color: #cc0000; }
-        .content-right .content-right-bottom .yuer a:hover {
-          transform: scale(-1, 1); }
-          .content-right .content-right-bottom .yuer a:hover div {
-            transform: scale(-1, 1);
-            display: block; }
+        .content-right .content-right-bottom .yuer a:hover img {
+          opacity: 0;
+          transform: rotateY(-98.5deg); }
+        .content-right .content-right-bottom .yuer a:hover div {
+          transform: rotateY(-8.5deg);
+          opacity: 1; }
 
 .s .img-a {
   display: inline-block;

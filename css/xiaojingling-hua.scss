@@ -173,12 +173,11 @@ section{
 
 .content-right{
     width: 641px;    
-    // background:lightgreen;
     .content-right-top{
         width: 100%;
         .content-right-top-l{
             width: 300px;
-            // height: 325px;           
+             height: 325px;           
             .zuoyi{
                 @include zuoyi(300px,170px)
             }
@@ -292,20 +291,29 @@ section{
             height: 310px;
             position:relative;
             a{
+                position: relative;
+                perspective: 1000px;
                 display:inline-block;
                 border-radius:8px;
                 transition:500ms all ease;                
                 img{
-                    border-radius:5px;                     
+                    border-radius:5px;
+                    position: absolute;
+                    transform: rotateY(0deg);
+                    opacity: 1;
+                    transition:0.5s all ease-in-out;                     
                 }
-                 div.yuertime,div.yuergoju{                   
+
+                div.yuertime,div.yuergoju{
                    width: 300px;
                    height: 310px;                  
                    position:absolute;
                    left:0;
                    top:0;                   
                    background:#e4f4ff;
-                   display:none;
+                   opacity: 0;
+                   transform: rotateY(-98.5deg);
+                   transition:0.5s all ease-in-out;
                    border-radius:5px;                  
                    h2{
                         border-radius:5px 5px 0 0;
@@ -373,20 +381,18 @@ section{
                         }
                    }
                 }
-                 &:hover{
+                
+                &:hover img{
+                        opacity: 0;
+                        transform: rotateY(-98.5deg);
+                } 
+
+                &:hover div{
+                    transform:rotateY(-8.5deg);
+                    opacity: 1;          
+                }
                   
-                        transform:scale(-1,1);                              
-                    div{
-                        transform:scale(-1,1);
-                        display:block;
-
-                       
-                    }
-                }   
             }
-
-           
-
         }
     }
 }

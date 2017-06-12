@@ -17,14 +17,6 @@ $(function(){
 	$('.search').click(function(){
 		$('.search').css('border','1px solid yellow');
 	})
-	//鼠标移入翻转
-	$('.rotate').hover(function(){
-		$(this).children().eq(0).css({'transform':'rotateY(180deg) perspective(133px)'});
-		$(this).children().eq(1).css({'transform':'rotateY(0deg) perspective(133px)'});
-	},function(){
-		$(this).children().eq(1).css({'transform':'rotateY(-180deg) perspective(133px)'});
-		$(this).children().eq(0).css({'transform':'rotateY(0deg) perspective(133px)'});
-	})
 	$('.zuoyi').hover(function(){
 		$(this).children().eq(1).stop().slideDown();
 	},

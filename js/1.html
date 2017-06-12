@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.list-img{list-style: none;margin: 0;padding: 0;width: 1320px;margin: 100px auto 0;}
+		.list-img li{float: left;width: 400px;height: 400px;margin:0 20px;position: relative; perspective: 1000px;}
+		.list-img li div,.list-img li span{width: 400px;height: 400px;position: absolute;}	
+
+		.list-img li div{background:rgba(0,0,0,0.6);color: #fff; transform: rotateY(90deg); transition: 0.5s ease-in-out;opacity:0;}
+		.list-img li:hover div{transform: rotateY(0); opacity: 1;}
+
+		.list-img li span{ background:#0CF; transform: rotateY(0); transition: 0.5s ease-in-out;opacity:1;}	
+		.list-img li:hover span{transform: rotateY(-90deg);opacity: 0;}
+	</style>
+</head>
+<body>
+	<ul class="list-img">
+		<li>
+			<div>文字内容</div>
+			<span>我是图片</span>
+		</li>
+		<li>
+			<div>文字内容</div>
+			<span>我是图片</span>
+		</li>
+		<li>
+			<div>文字内容</div>
+			<span>我是图片</span>
+		</li>
+	</ul>
+</body>
+</html>
